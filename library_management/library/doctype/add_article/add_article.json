@@ -1,0 +1,59 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-06-26 09:34:26.630326",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "article",
+  "amount",
+  "fine_type",
+  "fine"
+ ],
+ "fields": [
+  {
+   "fieldname": "article",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Article",
+   "options": "Article",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "article.amount",
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:parent.type==\"Return\"",
+   "fieldname": "fine",
+   "fieldtype": "Currency",
+   "in_standard_filter": 1,
+   "label": "Fine"
+  },
+  {
+   "depends_on": "eval:parent.type==\"Return\"",
+   "fieldname": "fine_type",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "fine_type",
+   "options": "Lost\nDamaged\nNo Issue"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-07-10 09:59:49.434360",
+ "modified_by": "Administrator",
+ "module": "library",
+ "name": "Add article",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

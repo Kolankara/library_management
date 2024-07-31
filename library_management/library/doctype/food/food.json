@@ -1,0 +1,91 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": ".#####",
+ "creation": "2024-07-02 09:39:26.216488",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "month",
+  "year",
+  "column_break",
+  "normal_rate",
+  "special_rate",
+  "section_break_x8cb",
+  "food_detail",
+  "total_count",
+  "total_amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "month",
+   "fieldtype": "Data",
+   "label": "Month"
+  },
+  {
+   "fieldname": "year",
+   "fieldtype": "Int",
+   "label": "Year"
+  },
+  {
+   "fieldname": "total_count",
+   "fieldtype": "Int",
+   "label": "Total count"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount"
+  },
+  {
+   "fieldname": "column_break",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "food_detail",
+   "fieldtype": "Table",
+   "label": "Food Detail",
+   "options": "Food Detail"
+  },
+  {
+   "fieldname": "section_break_x8cb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "normal_rate",
+   "fieldtype": "Currency",
+   "label": "Normal Rate",
+   "options": "Normal\nSpecial"
+  },
+  {
+   "fieldname": "special_rate",
+   "fieldtype": "Currency",
+   "label": "Special Rate"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-07-03 11:37:39.602903",
+ "modified_by": "Administrator",
+ "module": "library",
+ "name": "Food",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

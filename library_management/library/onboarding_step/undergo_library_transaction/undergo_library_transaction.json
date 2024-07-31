@@ -1,0 +1,18 @@
+{
+ "action": "Create Entry",
+ "creation": "2024-07-10 14:10:05.405505",
+ "docstatus": 0,
+ "doctype": "Onboarding Step",
+ "idx": 0,
+ "is_complete": 0,
+ "is_single": 0,
+ "is_skipped": 0,
+ "modified": "2024-07-10 14:10:05.405505",
+ "modified_by": "Administrator",
+ "name": "Undergo library transaction",
+ "owner": "Administrator",
+ "show_form_tour": 0,
+ "show_full_form": 0,
+ "title": "Library transaction",
+ "validate_action": 1
+}

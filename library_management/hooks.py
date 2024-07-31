@@ -9,7 +9,7 @@ app_license = "mit"
 # Includes in <head>
 # ------------------
 
-# include js, css files in header of desk.html
+# include js,css,files in header of desk.html
 # app_include_css = "/assets/library_management/css/library_management.css"
 # app_include_js = "/assets/library_management/js/library_management.js"
 
@@ -227,3 +227,37 @@ app_license = "mit"
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
+# # injected in desk.html
+# app_include_js = "assets/js/app.min.js"
+# app_include_css = "assets/js/app.min.css"
+
+# # All of the above support a list of paths too
+# app_include_js = ["assets/js/app1.min.js", "assets/js/app2.min.js"]
+
+# web_include_js = ["assets/js/web1.min.js", "assets/js/web2.min.js"]
+# web_include_css = ["assets/css/web1.min.css", "assets/css/web2.min.css"]
+
+after_migrate=["library_management.www.testhook.after_migrate"]
+
+# your_app/hooks.py
+
+doc_events = {
+    "User": {
+        "after_insert": "library_management.www.testhook.after_insert"
+    }
+}
+
+# doc_events = {
+#     "Library Member": {
+#         "on_change": "library_management.www.testhook.on_change"
+#     }
+# }
+doc_events = {
+    "Library Member": {
+        "before_insert": "library_management.www.testhook.before_insert"
+    },
+}
+
+override_doctype_class = {
+    "ToDo": "library_management.overrides.todo.CustomToDo"
+}

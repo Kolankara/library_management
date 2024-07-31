@@ -1,0 +1,34 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2024-07-04 12:12:45.749863",
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letterhead": null,
+ "modified": "2024-07-04 15:22:01.045451",
+ "modified_by": "Administrator",
+ "module": "library",
+ "name": "Article Report",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "SELECT * FROM tabArticle WHERE status=\"Issued\";",
+ "ref_doctype": "Article",
+ "report_name": "Article Report",
+ "report_script": "\r\n\r\nimport frappe\r\n\r\ndef execute(filters=None):\r\n    return frappe.db.get_all('Article', ['article_name', 'author'], filters=filters)\r\n",
+ "report_type": "Script Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Librarian"
+  },
+  {
+   "role": "Library member"
+  }
+ ]
+}

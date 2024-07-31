@@ -1,0 +1,38 @@
+{
+ "allow_roles": [
+  {
+   "role": "All"
+  }
+ ],
+ "creation": "2024-07-10 14:19:07.004054",
+ "docstatus": 0,
+ "doctype": "Module Onboarding",
+ "documentation_url": "http://127.0.0.1:8000/app/library-transaction",
+ "idx": 0,
+ "is_complete": 0,
+ "modified": "2024-07-10 14:19:07.004054",
+ "modified_by": "Administrator",
+ "module": "library",
+ "name": "Library",
+ "owner": "Administrator",
+ "steps": [
+  {
+   "step": "Introduction to Website"
+  },
+  {
+   "step": "Add article Details"
+  },
+  {
+   "step": "Add library member"
+  },
+  {
+   "step": "Create a Library membership"
+  },
+  {
+   "step": "Undergo library transaction"
+  }
+ ],
+ "subtitle": "Library manage",
+ "success_message": "Your transaction Completed",
+ "title": "Library Management"
+}

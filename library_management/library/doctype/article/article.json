@@ -2,18 +2,22 @@
  "actions": [],
  "allow_guest_to_view": 1,
  "allow_rename": 1,
- "autoname": "field:article_name",
+ "autoname": "format:{article_name}-{###}",
  "creation": "2024-06-20 11:34:49.771477",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "article_name",
+  "genre",
   "author",
   "isbn",
+  "image",
   "column_break_1t8w",
   "status",
   "publisher",
-  "image",
+  "shelf_name",
+  "row_no",
+  "position",
   "section_break_vlwb",
   "description",
   "route",
@@ -26,8 +30,7 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Article Name",
-   "reqd": 1,
-   "unique": 1
+   "reqd": 1
   },
   {
    "fieldname": "image",
@@ -54,7 +57,7 @@
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "Issued\nAvailable"
+   "options": "Issued\nAvailable\nReserved"
   },
   {
    "fieldname": "publisher",
@@ -84,6 +87,29 @@
    "fieldname": "amount",
    "fieldtype": "Currency",
    "label": "Amount"
+  },
+  {
+   "fieldname": "genre",
+   "fieldtype": "Link",
+   "label": "Genre",
+   "options": "Genre",
+   "reqd": 1
+  },
+  {
+   "fieldname": "row_no",
+   "fieldtype": "Int",
+   "label": "Row no"
+  },
+  {
+   "fieldname": "position",
+   "fieldtype": "Int",
+   "label": "Position"
+  },
+  {
+   "fieldname": "shelf_name",
+   "fieldtype": "Link",
+   "label": "Shelf Name",
+   "options": "Shelf"
   }
  ],
  "has_web_view": 1,
@@ -91,11 +117,11 @@
  "index_web_pages_for_search": 1,
  "is_published_field": "published",
  "links": [],
- "modified": "2024-06-26 14:46:34.851122",
+ "modified": "2024-07-30 11:42:16.623523",
  "modified_by": "Administrator",
  "module": "library",
  "name": "Article",
- "naming_rule": "By fieldname",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
@@ -133,6 +159,7 @@
   }
  ],
  "route": "Article",
+ "search_fields": "article_name,author",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []

@@ -1,0 +1,13 @@
+{
+ "creation": "2024-07-10 15:32:22.274459",
+ "docstatus": 0,
+ "doctype": "Dashboard Chart Source",
+ "idx": 0,
+ "modified": "2024-07-10 15:32:22.274459",
+ "modified_by": "Administrator",
+ "module": "library",
+ "name": "Article",
+ "owner": "Administrator",
+ "source_name": "Article",
+ "timeseries": 1
+}
