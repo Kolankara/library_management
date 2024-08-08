@@ -1,0 +1,29 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2024-08-03 09:58:47.923971",
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letterhead": null,
+ "modified": "2024-08-03 10:05:44.999400",
+ "modified_by": "Administrator",
+ "module": "library",
+ "name": "Library management details",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "Library Member",
+ "report_name": "Library management details",
+ "report_type": "Script Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Library member"
+  }
+ ]
+}

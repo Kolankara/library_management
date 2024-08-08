@@ -7,17 +7,17 @@
 // 	},
 // });
 
-frappe.ui.form.on("Library Transaction", {
-    	onload(frm) {
-            frm.set_query('library_member', () => {
-                return {
-                    query: 'library_management.library.doctype.library_transaction.library_transaction.custom_query',
+// frappe.ui.form.on("Library Transaction", {
+//     	onload(frm) {
+//             frm.set_query('library_member', () => {
+//                 return {
+//                     query: 'library_management.library.doctype.library_transaction.library_transaction.custom_query',
                     
-                }
-            })
+//                 }
+//             })
 
-        }
-    });
+//         }
+//     });
 
 frappe.ui.form.on('Library Transaction', {
     refresh: function(frm) {

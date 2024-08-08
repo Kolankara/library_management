@@ -3,6 +3,16 @@ import frappe
 from frappe import _
 
 def execute(filters=None):
+    """
+    Generates a report with article details including issue and return counts.
+    
+    Args:
+        filters (dict, optional): Dictionary containing filter values for the report.
+    
+    Returns:
+        columns (list): List of dictionaries defining the columns of the report.
+        data (list): List of dictionaries containing the article data for the report.
+    """
     columns = [
         {
             'fieldname': 'article_name',
@@ -44,13 +54,21 @@ def execute(filters=None):
     articles = frappe.db.get_list("Article", fields=["name", "article_name", "status", "isbn", "publisher"])
     
     
-    sub_trans = frappe.db.get_list('Library Transaction', filters={"type": "Issue", "docstatus": 1}, pluck="name")
-    sub_trans_re = frappe.db.get_list("Library Transaction",filters={"type":"Return","docstatus":1},pluck="name")
+    sub_trans = frappe.db.get_list('Library Transaction',
+                                   filters={"type": "Issue", "docstatus": 1},
+                                   pluck="name")
+    sub_trans_re = frappe.db.get_list("Library Transaction",
+                                      filters={"type":"Return","docstatus":1},
+                                      pluck="name")
     data = []
     for i in articles:
         
-        issue_count = frappe.db.count("Add article", filters={"article": i["name"], "parent": ["in", sub_trans]})
-        return_count=frappe.db.count("Add article",filters={"article": i["name"], "parent":["in",sub_trans_re]})
+        issue_count = frappe.db.count("Add article",
+                                      filters={"article": i["name"],
+                                               "parent": ["in", sub_trans]})
+        return_count=frappe.db.count("Add article",
+                                     filters={"article": i["name"],
+                                              "parent":["in",sub_trans_re]})
        
         data.append({
             'article_name': i["article_name"],
