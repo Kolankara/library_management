@@ -87,3 +87,5 @@ class Article(Document):
         else:
             self.shelf_name = None
             frappe.msgprint("Genre is not selected")
+
+
